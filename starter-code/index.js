@@ -34,7 +34,7 @@ class SimonGame {
     this.#enableControls();
     this.#setLost();
 
-    this.#elemGameInfo.innerHTML = SimonGame.#msgAgain;
+    this.#setGameInfo(SimonGame.#msgAgain);
   }
 
   static get #msgStart() {
@@ -130,7 +130,7 @@ class SimonGame {
     this.#elemGameButtonGroup = document.getElementById("buttons-container");
     this.#elemGameInfo = document.getElementById("game-info");
 
-    this.#elemGameInfo.innerHTML = SimonGame.#msgStart;
+    this.#setGameInfo(SimonGame.#msgStart);
     this.#elemGameInfo.onclick = this.#gameInfoClickHandler.bind(this);
 
     this.#elemAllGameButtons = Array.from(
@@ -153,7 +153,6 @@ class SimonGame {
       return;
     }
 
-    const initValue = target.innerHTML;
     this.#disableControls();
 
     this.init();

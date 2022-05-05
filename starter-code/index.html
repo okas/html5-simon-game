@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./index.js"></script>
+    <title>Simon Game</title>
+  </head>
+  <body>
+    <main class="crazy">
+      <aside>
+        <label for="gametype_easy">Easy</label>
+        <input
+          id="gametype_easy"
+          type="radio"
+          name="gametype"
+          checked
+          value="easy"
+        />
+        <label for="gametype_hard">Hard</label>
+        <input id="gametype_hard" type="radio" name="gametype" value="hard" />
+        <label for="gametype_crazy">Crazy</label>
+        <input id="gametype_crazy" type="radio" name="gametype" value="crazy" />
+      </aside>
+      <div id="game-container" class="waiting">
+        <section id="buttons-container">
+          <button class="btn-game" id="green"></button>
+          <button class="btn-game" id="red"></button>
+          <button class="btn-game" id="yellow"></button>
+          <button class="btn-game" id="blue"></button>
+        </section>
+        <div class="waiting" id="game-info"></div>
+      </div>
+    </main>
+  </body>
+</html>
